@@ -22,6 +22,17 @@ public class PreferredCustomer extends Customer
 
     private void updateDiscountLevel(int loyaltyPoints)
     {
+        if (loyaltyPoints < 500) {
+            this.discountLevel = 0.00;
+        } else if (loyaltyPoints < 1000) {
+            this.discountLevel = 0.05;
+        } else if (loyaltyPoints < 1500) {
+            this.discountLevel = 0.06;
+        } else if (loyaltyPoints < 2000) {
+            this.discountLevel = 0.07;
+        } else {
+            this.discountLevel = 0.10;
+        }
     }
 
     public int getLoyaltyPoints()
@@ -32,6 +43,7 @@ public class PreferredCustomer extends Customer
     public void setLoyaltyPoints(int loyaltyPoints)
     {
         this.loyaltyPoints = loyaltyPoints;
+        updateDiscountLevel(loyaltyPoints);
     }
 
     public double getDiscountLevel()
@@ -49,5 +61,9 @@ public class PreferredCustomer extends Customer
     {
         return super.toString() + " loyaltyPoints=" + loyaltyPoints
             + ", discountLevel=" + discountLevel;
+    }
+
+    public void addLoyaltyPoints(int points) {
+        setLoyaltyPoints(getLoyaltyPoints() + points);
     }
 }
