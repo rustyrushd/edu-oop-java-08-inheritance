@@ -1,13 +1,21 @@
 package ie.atu;
 
-public class Main {
+public class Main
+{
     public static void main(String[] args)
     {
-        Person firstPerson = new Person();
-        firstPerson.setName("Jeff");
-        firstPerson.setAddress("Jeff's Island");
-        firstPerson.setPhoneNumber("123456");
+        Person person1 = new Person();
+        Person person2 = new Person();
+        person2.setName("Jeff");
+        person2.setAddress("Jeff's Island");
+        person2.setPhoneNumber("123456");
 
-        System.out.println(firstPerson);
+        Customer customer1 = new Customer();
+        Customer customer2 = new Customer("Tim", "Timmy Town", "1234", 2, true);
+
+        System.out.println(person1);
+        System.out.println(person2);
+        System.out.println(customer1);
+        System.out.println(customer2);
     }
 }

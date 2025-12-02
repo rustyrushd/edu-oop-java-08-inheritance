@@ -6,44 +6,53 @@ public class Person
     private String address;
     private String phoneNumber;
 
-    public Person() {
+    public Person()
+    {
         this.name = "";
         this.address = "";
         this.phoneNumber = "";
     }
 
-    public Person(String name, String address, String phoneNumber) {
+    public Person(String name, String address, String phoneNumber)
+    {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getAddress() {
+    public String getAddress()
+    {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(String address)
+    {
         this.address = address;
     }
 
-    public String getPhoneNumber() {
+    public String getPhoneNumber()
+    {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber)
+    {
         this.phoneNumber = phoneNumber;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'';
