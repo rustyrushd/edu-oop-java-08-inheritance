@@ -10,12 +10,7 @@ public class Main
         person2.setAddress("Jeff's Island");
         person2.setPhoneNumber("123456");
 
-        Customer customer1 = new Customer();
-        Customer customer2 = new Customer("Tim", "Timmy Town", "1234", 2, true);
-
         System.out.println(person1);
         System.out.println(person2);
-        System.out.println(customer1);
-        System.out.println(customer2);
     }
 }
